@@ -12,6 +12,16 @@
 <script>
 export default {
   name: "IndexPage",
+  head: {
+    title: "Home page",
+    meta: [
+      {
+        hid: "description",
+        name: "description",
+        content: "This is the home Page",
+      },
+    ],
+  },
 
   data() {
     return {
