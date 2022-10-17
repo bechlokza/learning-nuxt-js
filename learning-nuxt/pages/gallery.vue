@@ -7,7 +7,17 @@
         v-for="(image, index) in images"
         :key="`$image-${index}`"
       >
-        <img :src="image.url_medium_size" />
+        <nuxt-img
+          :src="image.url_medium_size"
+          width="100%"
+          height="auto"
+          format="webp"
+          quality="90"
+          fit="cover"
+          loading="lazy"
+          :alt="image.title"
+          v-tooltip="image.title"
+        />
         <div class="image-desc">{{ image.description }}</div>
       </li>
     </ul>
@@ -15,6 +25,7 @@
 </template>
 
 <script>
+import "floating-vue/dist/style.css";
 export default {
   data() {
     return {

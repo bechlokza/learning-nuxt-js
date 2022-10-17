@@ -3,6 +3,7 @@ import Vue from "vue";
 export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: "static",
+  buildModules: ["@nuxt/image"],
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
@@ -19,6 +20,10 @@ export default {
     link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
   },
 
+  image: {
+    domains: ["https://pixelford.com"],
+  },
+
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [],
 
@@ -32,7 +37,7 @@ export default {
   buildModules: [],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: ["@nuxt/http"],
+  modules: ["@nuxt/http", "@nuxt/image"],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
