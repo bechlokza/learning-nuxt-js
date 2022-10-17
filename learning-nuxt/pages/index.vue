@@ -1,15 +1,12 @@
 <template>
   <div>
-    <h1>Most popular rivers in the world</h1>
-    <ul>
-      <li v-for="(river, index) in rivers" :key="`$river-${index}`">
-        {{ river.title }}
-      </li>
-    </ul>
+    <h1>Basics</h1>
+    <button v-tooltip="'This is our button'">Button</button>
   </div>
 </template>
 
 <script>
+import "floating-vue/dist/style.css";
 export default {
   name: "IndexPage",
   head: {
@@ -23,15 +20,6 @@ export default {
     ],
   },
 
-  data() {
-    return {
-      rivers: [],
-    };
-  },
-
-  async fetch() {
-    const res = await this.$http.$get("https://api.nuxtjs.dev/rivers");
-    this.rivers = res;
-  },
+  data() {},
 };
 </script>
