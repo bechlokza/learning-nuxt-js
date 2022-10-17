@@ -37,7 +37,7 @@ export default {
   grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
   grid-column-gap: 20px;
   grid-row-gap: 20px;
-  padding: 0;
+  padding: 0 20px;
   list-style-type: none;
 }
 .gallery-image {
